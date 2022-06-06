@@ -1,12 +1,12 @@
-import Link from 'next/link'
 import Head from 'next/head'
-import { Text, Image, Input, Button, Flex, Container, VStack } from '@chakra-ui/react'
+import Link from 'next/link'
+import { Image, Input, Button, Flex, Container, VStack } from '@chakra-ui/react'
 
-function Login() {
+function ResetPassword() {
     return (
         <>
             <Head>
-                    <title>SisFRE</title>
+                <title>Redefinir Senha</title>
             </Head>
 
             <Flex w='100vw' h='100vh' align='center' justify='center'>
@@ -17,9 +17,8 @@ function Login() {
                                 src="/sisfre.png"
                             />
                             <Input type='email' placeholder='E-Mail' required/>
-                            <Input type='password' placeholder='Senha' required/>
-                            <Link href='/reset-password'><Text color='blue.600'>Esqueceu sua senha?</Text></Link>
-                            <Link href='/admin'><Button colorScheme='green'>Entrar</Button></Link>
+                            
+                            <Button colorScheme='green'>Recuperar Senha</Button>
                         </VStack>
                     </form>
                 </Container>
@@ -28,4 +27,4 @@ function Login() {
     )
 }
 
-export default Login
+export default ResetPassword
