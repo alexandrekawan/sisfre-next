@@ -19,7 +19,7 @@ function Login() {
                             <Input type='email' placeholder='E-Mail' required/>
                             <Input type='password' placeholder='Senha' required/>
                             <Link href='/reset-password'><Text color='blue.600'>Esqueceu sua senha?</Text></Link>
-                            <Link href='/admin'><Button colorScheme='green'>Entrar</Button></Link>
+                            <Link href='/admin'><Button bgColor='primary' color='secondary'>Entrar</Button></Link>
                         </VStack>
                     </form>
                 </Container>

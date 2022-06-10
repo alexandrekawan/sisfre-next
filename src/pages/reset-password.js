@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import { Image, Input, Button, Flex, Container, VStack } from '@chakra-ui/react'
 
 function ResetPassword() {
@@ -18,7 +17,7 @@ function ResetPassword() {
                             />
                             <Input type='email' placeholder='E-Mail' required/>
                             
-                            <Button colorScheme='green'>Recuperar Senha</Button>
+                            <Button bgColor='primary' color='secondary'>Recuperar Senha</Button>
                         </VStack>
                     </form>
                 </Container>
