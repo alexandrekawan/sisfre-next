@@ -11,29 +11,47 @@ function Admin() {
             <Head>
                 <title>Administração</title>
             </Head>
-            <Container w='100vw' h='100vh'>
-                { <HamburgerIcon color={navBtnColor} onMouseEnter={onToggle}/> }
+            { (!isOpen) ? <HamburgerIcon color={navBtnColor} w='10' h='10' m='1' onMouseEnter={onToggle}/> : <></> }
+                {
+                    (isOpen)
 
-                <Slide direction='left' in={isOpen} style={
-                        {
-                            zIndex: 10
-                        }
-                    }>
-                        <VStack onMouseLeave={onToggle} w='xs' h='100vh' bgColor='primary' color='secondary'> 
-                            <Box p='1'>
-                                <Avatar>
-                                </Avatar>
-                            </Box>
-                            <Box p='1'>
-                                <Text><CloseIcon w={'3'} h={'3'}/> Faltas</Text>
-                            </Box>
-                            <Box p='1'>
-                                <Text><CalendarIcon w={'3'} h={'3'}/> Sabado Letivo</Text>
-                            </Box>
-                        </VStack>
-                    </Slide>
-                
-            </Container>
+                        ?
+
+                        <Slide direction='left' in={isOpen} style={
+                            {
+                                zIndex: 10
+                            }
+                        }>
+                            <VStack onMouseLeave={onToggle} w='fit-content' h='100vh' p='5' bgColor='primary' color='secondary'> 
+                                <Box p='1'>
+                                    <Avatar>
+                                    </Avatar>
+                                </Box>
+                                <Box p='1' w='100%' _hover={{
+                                    bgColor: 'secondary',
+                                    color: 'primary'
+                                }}>
+                                    <Text><CloseIcon w={'3'} h={'3'}/> Faltas</Text>
+                                </Box>
+                                <Box p='1' _hover={{
+                                    bgColor: 'secondary',
+                                    color: 'primary'
+                                }}>
+                                    <Text><CalendarIcon w={'3'} h={'3'}/> Sabado Letivo</Text>
+                                </Box>
+                            </VStack>
+                        </Slide>
+                        
+                        :
+
+                        <></>
+                }
+            
+            
+                <Container>
+                    
+                </Container>
+
         </>
     )
 }
